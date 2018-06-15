@@ -1,18 +1,18 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const cors = require('cors');
+// const cors = require('cors');
 
 const routes = require('./api/routes/routes');
 
 const server = express();
-const corsOptions = {
-  // If you're moving onto the stretch problem you'll need to set this obj with the appropriate fields
-  // ensure that your client's URL/Port can achieve a Handshake
-  // then pass this object to the cors() function
-};
+// const corsOptions = {
+//   // If you're moving onto the stretch problem you'll need to set this obj with the appropriate fields
+//   // ensure that your client's URL/Port can achieve a Handshake
+//   // then pass this object to the cors() function
+// };
 
 server.use(bodyParser.json());
-server.use(cors());
+// server.use(cors());
 
 routes(server);
 
@@ -21,6 +21,6 @@ module.exports = {
 };
 
 
-server.listen(8000, () => {
-  console.log('/n*** API running on port 8k ***\n');
+server.listen(5000, () => {
+  console.log('/n*** API running on port 5k ***\n');
 });

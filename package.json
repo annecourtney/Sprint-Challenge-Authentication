@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon"
+    "start": "nodemon app.js"
   },
   "repository": "https://github.com/annecourtney/Sprint-Challenge-Authentication.git",
   "author": "Anne Courtney <annecourtney_1@yahoo.com>",
@@ -15,7 +15,9 @@
     "express": "^4.16.3",
     "jsonwebtoken": "^8.3.0",
     "mongoose": "^5.1.5",
-    "node-fetch": "^2.1.2",
+    "node-fetch": "^2.1.2"
+  },
+  "devDependencies": {
     "nodemon": "^1.17.5"
   }
 }
