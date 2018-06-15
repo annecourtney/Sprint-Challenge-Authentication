@@ -19,3 +19,8 @@ routes(server);
 module.exports = {
   server
 };
+
+
+server.listen(8000, () => {
+  console.log('/n*** API running on port 8k ***\n');
+});
