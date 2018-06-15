@@ -14,7 +14,6 @@ const UserSchema = Schema({
     type: String,
     unique: true,
     required: true,
-    minlength: 4
   }
 });
 
@@ -22,10 +21,14 @@ UserSchema.pre('save', function(next) {
   return bcrypt
     .hash(this.password, 10)
     .then(hash => {
+
       this.password = hash;
+
       return next();
     })
-    .catch(err => next(err));
+    .catch(err => {
+      return next(err);
+    })
 });
 
 UserSchema.methods.checkPassword = function(plainTextPW, callback) {
